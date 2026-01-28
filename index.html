@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil GourmeTech</title>
+    <title>Accueil - GourmeTech</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,17 +22,117 @@
                 <img src="assets/icons/logo_GourmeTech.svg" alt="GourmeTech, les meilleures recettes" class="logo-icon">
                 <a href="index.html" class="logo-text">GourmeTech</a>
             </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <ul class="nav-list">
+
+            <ul class="menu" id="menu">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="recette.html">Ajouter unbe recette</a></li>
+                <li><a href="recette.html">Ajouter une recette</a></li>
                 <li><a href="favoris.html">Favoris</a></li>
                 <li><a href="a-propos.html">À propos</a></li>
             </ul>
 
+            <!-- Burger -->
+            <button class="burger" id="burger" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </nav>
     </header>
+
+    <main>
+        <section class="search-recipes">
+            <!-- Recherche -->
+            <section class="search-section">
+                <form class="search-form">
+                    <input type="search" placeholder="Rechercher une recette..." aria-label="Rechercher une recette">
+                    <button type="submit">Rechercher</button>
+                </form>
+            </section>
+
+            <!-- Filtres -->
+            <section class="filters">
+                <fieldset>
+                    <p>Catégorie</p>
+                    <label><input type="checkbox"> Entrée</label>
+                    <label><input type="checkbox"> Plat</label>
+                    <label><input type="checkbox"> Dessert</label>
+                </fieldset>
+
+                <fieldset>
+                    <p>Temps</p>
+                    <label><input type="checkbox"> Rapide</label>
+                    <label><input type="checkbox"> Moyen</label>
+                    <label><input type="checkbox"> Long</label>
+                </fieldset>
+
+                <fieldset>
+                    <p>Difficulté</p>
+                    <label><input type="checkbox"> Facile</label>
+                    <label><input type="checkbox"> Moyen</label>
+                    <label><input type="checkbox"> Difficile</label>
+                </fieldset>
+            </section>
+        </section>
+
+        <!-- Grille recettes -->
+        <section class="recipes-grid">
+
+            <article class="recipe-card">
+                <img src="assets/images/Tarte-pommes-diliara-garifullina-Lkb1g9ivC2c-unsplash.jpg"
+                    alt="Tarte aux pommes">
+                <div class="recipe-content">
+                    <h2>Tarte aux pommes</h2>
+                    <div class="tags">
+                        <span class="tag dish">Dessert</span>
+                        <span class="tag time">60 min</span>
+                        <span class="tag difficult">Facile</span>
+                    </div>
+                    <a href="recette.html" class="btn-recipe">Voir la recette</a>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <img src="assets/images/Ratatouille-provencale-marjan-sadeghi-3vDJ--i7w88-unsplash.jpg"
+                    alt="Ratatouille à la provençale">
+                <div class="recipe-content">
+                    <h2>Ratatouille à la provençale</h2>
+                    <div class="tags">
+                        <span class="tag dish">Plat</span>
+                        <span class="tag time">45 min</span>
+                        <span class="tag difficult">Moyen</span>
+                    </div>
+                    <a href="recette.html" class="btn-recipe">Voir la recette</a>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <img src="assets/images/Veloute-potiron-elena-leya-vesMzw6ADMA-unsplash.jpg" alt="Velouté de potiron">
+                <div class="recipe-content">
+                    <h2>Velouté de potiron</h2>
+                    <div class="tags">
+                        <span class="tag dish">Entrée</span>
+                        <span class="tag time">30 min</span>
+                        <span class="tag difficult">Facile</span>
+                    </div>
+                    <a href="recette.html" class="btn-recipe">Voir la recette</a>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="favoris.html">Favoris</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <p>© 2025 GourmeTech</p>
+    </footer>
+
+
 </body>
 
 </html>
