@@ -1,0 +1,129 @@
+/* =========================================
+   CONFIGURATION ROOT
+   ========================================= */
+
+/* * {
+    outline: 1px solid red;
+} */
+
+:root {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    --color-background: #ffffff;
+    --color-text: #2B3D51;
+    --color-muted: #eaeaea;
+
+    --color-primary: #E67F22;
+    --color-secondary: #6b4321;
+}
+
+
+/* RESET ET BASE */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter" ;
+}
+
+main {
+    padding: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+    padding: 1.2rem 1.6rem;
+    background-color: var(--color-background);
+    border-bottom: 1px solid #eaeaea;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.main-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-icon {
+    width: 4rem;
+    height: auto;
+}
+
+.logo-text {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-menu-btn {
+  cursor: pointer;
+}
+
+.nav-toggle:checked ~ .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  right: 0;
+  background: #ffffff;
+  padding: 2rem;
+
+  li {
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid var(--color-primary);
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border-radius: 1.2rem;
+    border: 1px solid transparent;
+
+}
