@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette - GourmeTech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navigation principale">
+            <div class="logos">
+                <img src="assets/icons/logo_GourmeTech.svg" alt="GourmeTech, les meilleures recettes" class="logo-icon">
+                <a href="index.html" class="logo-text">GourmeTech</a>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="recette.html">Ajouter une recette</a></li>
+                <li><a href="favoris.html">Favoris</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+
+            <!-- Burger -->
+            <button class="burger" id="burger" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main class="recipe-page">
+
+
+        <!-- HERO RECETTE -->
+        <section class="recipe-hero">
+            <img src="assets/images/Tarte-pommes-diliara-garifullina-Lkb1g9ivC2c-unsplash.jpg" alt="Tarte aux pommes">
+
+            <div class="recipe-hero-content">
+                <h1>Tarte aux pommes</h1>
+
+                <div class="tags">
+                    <span class="tag dish">Dessert</span>
+                    <span class="tag time">60 min</span>
+                    <span class="tag difficult">Facile</span>
+                    <span class="tag people">4 pers.</span>
+                </div>
+
+                <button class="btn-favorite">Ajouter aux favoris</button>
+            </div>
+        </section>
+
+        <!-- CONTENU RECETTE -->
+        <section class="recipe-content-grid">
+
+            <!-- INGREDIENTS -->
+            <section class="ingredients">
+                <h2>Ingrédients</h2>
+                <div class="ingredients-grid">
+                    <div class="ingredients-card">
+                        <img src="assets/images/Pommes-tuqa-nabi-71JHj_t-kS0-unsplash.jpg" alt="Des pommes">
+                        <p>4 pommes</p>
+                    </div>
+                    <div class="ingredients-card">
+                        <img src="assets/images/Pate-brisee-nathan-dumlao-oB_PNyJ3xIE-unsplash.jpg"
+                            alt="Une pâte brisée">
+                        <p>1 pâte brisée</p>
+                    </div>
+                    <div class="ingredients-card">
+                        <img src="assets/images/Sucre-poudre-mathilde-langevin-Q5xjxSfs1Lk-unsplash.jpg"
+                            alt="Du sucre en poudre">
+                        <p>80 g de sucre</p>
+                    </div>
+                    <div class="ingredients-card">
+                        <img src="assets/images/Beurre-sorin-gheorghita-094mP_CBdpM-unsplash.jpg" alt="Du beurre">
+                        <p>40 g de beurre</p>
+                    </div>
+                    <div class="ingredients-card">
+                        <img src="assets/images/Vanille-sidath-vimukthi-fIGw-jVGy5g-unsplash.jpg" alt="De la vanille">
+                        <p>1 sachet de sucre vanillé</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ETAPES -->
+            <section class="steps">
+                <h2>Préparation</h2>
+                <ol>
+                    <li>Préchauffer le four à 180°C.</li>
+                    <li>Éplucher et couper les pommes.</li>
+                    <li>Disposer la pâte dans un moule.</li>
+                    <li>Ajouter les pommes et le sucre.</li>
+                    <li>Enfourner pendant 40 minutes.</li>
+                </ol>
+            </section>
+
+        </section>
+
+        <!-- RECETTES SIMILAIRES -->
+        <section class="similar-recipes">
+            <h2>Recettes similaires</h2>
+
+            <div class="recipes-grid">
+                <!-- tu réutilises exactement les mêmes cards -->
+                <!-- (copie celles de la home) -->
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <nav class="footer-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-about">
+                <h3>À propos de GourmeTech</h3>
+                <p>
+                    GourmeTech est une plateforme de recettes culinaires interactive
+                    développée dans le cadre d'un projet pédagogique.
+                </p>
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 GourmeTech - Tous droits réservés</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

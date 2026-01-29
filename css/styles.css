@@ -49,6 +49,11 @@ a {
     color: inherit;
 }
 
+
+/* =========================================
+   HOMEPAGE
+   ========================================= */
+
 /* HEADER */
 
 header {
@@ -339,6 +344,92 @@ nav {
 }
 
 
+/* =========================================
+   PAGE RECETTE
+   ========================================= */
+
+.recipe-hero img {
+    width: 100%;
+    max-height: 24rem;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.recipe-hero h1 {
+    font-family: "Lobster";
+    color: var(--color-text);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.btn-favorite {
+    margin-bottom: 2rem;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 2.4rem;
+    margin-top: 2rem;
+}
+
+.ingredients h2 {
+    font-family: "Lobster";
+    font-size: 2.2rem;
+    color: var(--color-text);
+    margin-top: 2rem;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.ingredients-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ingredients-card img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ingredients-card p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.steps h2 {
+    font-family: "Lobster";
+    font-size: 2.2rem;
+    color: var(--color-text);
+    margin-top: 2rem;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.steps ol {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    font-size: 1.4rem;
+}
+
+.steps li {
+    margin-bottom: 1rem;
+}
+
+.similar-recipes h2 {
+    font-family: "Lobster";
+    font-size: 2.2rem;
+    color: var(--color-text);
+    margin-top: 2rem;
+    border-bottom: 2px solid var(--color-primary);
+}
+
 
 /* RESPONSIVE */
 
@@ -426,5 +517,9 @@ nav {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
         grid-row: 2;
+    }
+
+    .ingredients-grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
