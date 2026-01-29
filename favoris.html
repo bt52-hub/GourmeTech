@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoris - GourmeTech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navigation principale">
+            <div class="logos">
+                <img src="assets/icons/logo_GourmeTech.svg" alt="GourmeTech, les meilleures recettes" class="logo-icon">
+                <a href="index.html" class="logo-text">GourmeTech</a>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="recette.html">Ajouter une recette</a></li>
+                <li><a href="favoris.html">Favoris</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer la couleur du thème"> 🌙 </button>
+
+            <!-- Burger -->
+            <button class="burger" id="burger" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="favorite-recipes">
+            <img src="assets/images/Cooking-becca-tapert-kYh-O1Jk7EE-unsplash.jpg"
+                alt="Un jeune couple en train de cuisiner">
+            <article>
+                <h1>Mes recettes favorites</h1>
+                <p>
+                    Retrouvez ici toutes les recettes que vous avez sauvegardées.
+                </p>
+            </article>
+        </section>
+        <!-- Message si aucun favori -->
+        <section class="empty-favorites hidden" id="emptyFavorites">
+            <p>Vous n’avez encore aucune recette préférée.</p>
+        </section>
+
+        <!-- Grille des favoris -->
+        <section class="recipes-grid" id="favoritesGrid">
+            <!-- Les cartes seront injectées en JS -->
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <nav class="footer-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-about">
+                <h3>À propos de GourmeTech</h3>
+                <p>
+                    GourmeTech est une plateforme de recettes culinaires interactive
+                    développée dans le cadre d'un projet pédagogique.
+                </p>
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 GourmeTech - Tous droits réservés</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

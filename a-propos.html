@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos - GourmeTech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navigation principale">
+            <div class="logos">
+                <img src="assets/icons/logo_GourmeTech.svg" alt="GourmeTech, les meilleures recettes" class="logo-icon">
+                <a href="index.html" class="logo-text">GourmeTech</a>
+            </div>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="recette.html">Ajouter une recette</a></li>
+                <li><a href="favoris.html">Favoris</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer la couleur du thème"> 🌙 </button>
+
+            <!-- Burger -->
+            <button class="burger" id="burger" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main class="about-page">
+
+        <!-- INTRO -->
+        <section class="about-intro">
+            <img src="assets/images/Cooking-becca-tapert-kYh-O1Jk7EE-unsplash.jpg"
+                alt="Un jeune couple en train de cuisiner">
+            <article>
+                <h1>GourmeTech, qui sommes-nous ?</h1>
+                <p>
+                    GourmeTech est une plateforme dédiée au partage de recettes simples,
+                    gourmandes et accessibles à tous.
+                    Ce projet a été conçu dans un cadre pédagogique pour mettre en pratique
+                    les fondamentaux du développement web.
+                </p>
+            </article>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact-section">
+            <h2>Nous contacter</h2>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input id="name" name="name" type="text" required aria-required="true">
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required aria-required="true">
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="btn-primary">Envoyer</button>
+            </form>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>FAQ</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Comment puis-je ajouter une recette ?
+                </button>
+                <div class="faq-answer">
+                    <p>Rendez-vous sur la page "Ajouter une recette" et complétez le formulaire.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Combien de temps les recettes sont-elles conservées ?
+                </button>
+                <div class="faq-answer">
+                    <p>Les recettes sont conservées localement 1 an grâce au localStorage.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Puis-je utiliser GourmeTech pour créer de nouvelles recettes ?
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, dans sa prochaine version le site permettra de composer des recettes à partir d'une liste
+                        d'ingrédients.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <nav class="footer-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-about">
+                <h3>À propos de GourmeTech</h3>
+                <p>
+                    GourmeTech est une plateforme de recettes culinaires interactive
+                    développée dans le cadre d'un projet pédagogique.
+                </p>
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 GourmeTech - Tous droits réservés</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
