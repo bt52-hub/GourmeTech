@@ -511,6 +511,8 @@ nav {
     text-align: center;
 }
 
+.recipes-grid
+
 .empty-favorites {
     padding: 4rem;
     text-align: center;
@@ -521,6 +523,14 @@ nav {
 
 .hidden {
     display: none;
+}
+
+.btn-remove-favorite {
+    background-color: var(--color-muted);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 1rem;
 }
 
 /* =========================
@@ -747,31 +757,17 @@ textarea {
 
 body.dark-theme {
     --color-background: #121212;
-    --color-surface: #121212;
-    --color-surface-alt: #121212;
 
-    --color-text: #eaeaea;
-    --color-muted: #121212;
+    --color-text: #ffffff;
+    --color-muted: #222222;
     --color-muted-2: #9a9a9a;
 
     --color-primary: #E67F22;
     --color-secondary: #ff9f43;
 }
 
-body.dark-theme .search-recipes {
-    background-color: var(--color-surface);
-    box-shadow: none;
-    border: 1px solid var(--color-muted);
-}
-
-body.dark-theme .filters fieldset {
-    color: var(--color-background);
-}
-
-body.dark-theme .recipe-card {
-    background-color: var(--color-surface);
-    box-shadow: none;
-    border: 1px solid var(--color-muted);
+body.dark-theme .search-form input {
+    background-color: var(--color-text);
 }
 
 body.dark-theme .recipe-content h2 {
@@ -788,7 +784,6 @@ body.dark-theme .btn-recipe:hover {
 }
 
 body.dark-theme .site-footer {
-    background-color: var(--color-surface-alt);
     border-top: 1px solid var(--color-muted);
     color: var(--color-text);
 }
@@ -808,6 +803,5 @@ body.dark-theme .btn-favorite.is-favorite {
 }
 
 body.dark-theme .contact-form {
-    background-color: var(--color-surface);
     box-shadow: none;
 }

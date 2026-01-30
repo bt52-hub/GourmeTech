@@ -1,6 +1,4 @@
 
-const STORAGE_KEY = "gourmetech_favorites";
-
 // MENU BURGER ------------
 
 const burger = document.getElementById("burger");
@@ -36,8 +34,10 @@ themeToggle.addEventListener("click", () => {
 
 // BOUTON AJOUTER FAVORIS ------------
 
+const STORAGE_KEY = "gourmetech_favorites";
+
 document.addEventListener("DOMContentLoaded", () => {
-    const favoriteButtons = document.querySelectorAll(".favorite-btn");
+    const favoriteButtons = document.querySelectorAll(".btn-favorite");
     if (favoriteButtons.length === 0) return;
     // Récupérer les favoris
     const getFavorites = () =>
@@ -80,6 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// MISE À JOUR DU BOUTON AJOUTER FAVORIS ------------
+
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState !== "visible") return;
+
+    const favoriteButtons = document.querySelectorAll(".btn-favorite");
+
+    favoriteButtons.forEach(button => {
+        const recipeId = button.dataset.recipeId;
+        const favorites =
+            JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+        if (favorites.includes(recipeId)) {
+            button.classList.add("is-favorite");
+            button.textContent = "🤍 Retirer des favoris";
+        } else {
+            button.classList.remove("is-favorite");
+            button.textContent = "❤️ Ajouter aux favoris";
+        }
+    });
+});
 
 // AJOUTER DES RECETTES AUX FAVORIS ------------
 
@@ -93,15 +114,17 @@ class Recipe {
 
     renderCard() {
         return `
-        <article class="recipe-card">
+        <article class="recipe-card" data-recipe-id="${this.id}">
             <a href="${this.link}">
                 <img src="${this.image}" alt="${this.title}">
                 <h2>${this.title}</h2>
             </a>
+            <button class="btn-remove-favorite" aria-label="Supprimer des favoris">
+                Supprimer 🗑️
+            </button>
         </article>
     `;
     }
-
 }
 
 const RECIPES = [
@@ -154,3 +177,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const removeButtons = document.querySelectorAll(".btn-remove-favorite");
+
+    removeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const card = button.parentElement;
+            const recipeId = card.dataset.recipeId;
+
+            let favorites = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            favorites = favorites.filter(id => id !== recipeId);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+
+            card.remove();
+        });
+    });
+});
